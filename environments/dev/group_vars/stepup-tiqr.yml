@@ -1,0 +1,43 @@
+# Config for tiqr component
+
+# Support URLs displayed in the Tiqr user interface
+# Format: yaml dictionary of locale: url
+# TODO: Set support URL
+tiqr_support_url:
+  en_GB: "https://stepup.dev.rctsaai.pt/en_GB/tiqr_support_url"
+  nl_NL: "https://stepup.dev.rctsaai.pt/nl_NL/tiqr_support_url"
+
+# This is shown where and when?
+# TODO: Set info URL
+tiqr_info_url: "https://stepup.dev.rctsaai.pt/tiqr_info_url"
+
+# This is shown in some versions of the Tiqr app when the information of a tiqr account is shown
+# TODO: Set info Name
+tiqr_info_name: "OpenConext-Stepup"
+
+# Used for Symfony CSRF protection
+tiqr_secret: "{{ lookup('file', inventory_dir+'/secret/tiqr') }}"
+
+# Format: PEM RSA PRIVATE KEY (Vaulted)
+# Certificate in all.yml group_vars
+tiqr_idp_privatekey: "{{ lookup('file', inventory_dir+'/saml_cert/tiqr_idp.key') }}"
+
+# OAuth consumer key for authentication to the keyserver
+oath_keyserver_consumerkey: "{{ lookup('file', inventory_dir+'/secret/oath_keyserver') }}"
+
+# Optional API key for Firebase Cloud Messaging (FCM)
+# Required for sending push notifications to Android devices
+# When not configured Android users will not receive push notifications. They can still use Tiqr to autehnticate by
+# scanning the QR code.
+# TODO: Set firebase API key to enable push notifications on Android
+# tiqr_firebase_apikey: "{{ lookup('file', inventory_dir+'/secret/firebase_apikey'"
+
+# Optional X.509 Client certificate and private key for using the Apple Push Notification service (APNs)
+# Format: PEM X.509 certificate followed by PEM RSA PRIVATE KEY
+# Required for sending push notifications to iOS devices
+# When not configured iOS users will not receive push notifications. They can still use Tiqr to autehnticate by
+# scanning the QR code.
+# TODO: Set APNS client certificate to enable push notifications on iOS
+# tiqr_apns_pemfile: "{{ lookup('file', inventory_dir+'/ssl_cert/apns.pem') }}"
+
+

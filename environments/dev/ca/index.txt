@@ -1,0 +1,11 @@
+V	230901101637Z		D90BC75DD931ECA844120F6FD2E35777	unknown	/C=NL/O=Development VM/CN=gateway.stepup.example.com
+V	230901101637Z		D90BC75DD931ECA844120F6FD2E35778	unknown	/C=NL/O=Development VM/CN=ra.stepup.example.com
+V	230901101637Z		D90BC75DD931ECA844120F6FD2E35779	unknown	/C=NL/O=Development VM/CN=selfservice.stepup.example.com
+V	230901101637Z		D90BC75DD931ECA844120F6FD2E3577A	unknown	/C=NL/O=Development VM/CN=manage.stepup.example.com
+V	230901101637Z		D90BC75DD931ECA844120F6FD2E3577B	unknown	/C=NL/O=Development VM/CN=middleware.stepup.example.com
+V	230901101638Z		D90BC75DD931ECA844120F6FD2E3577C	unknown	/C=NL/O=Development VM/CN=tiqr.stepup.example.com
+V	230901101638Z		D90BC75DD931ECA844120F6FD2E3577D	unknown	/C=NL/O=Development VM/CN=webauthn.stepup.example.com
+V	230901101638Z		D90BC75DD931ECA844120F6FD2E3577E	unknown	/C=NL/O=Development VM/CN=keyserver.stepup.example.com
+V	230901101638Z		D90BC75DD931ECA844120F6FD2E3577F	unknown	/C=NL/O=Development VM/CN=simplesaml.stepup.example.com
+V	230901101638Z		D90BC75DD931ECA844120F6FD2E35780	unknown	/C=NL/O=Development VM/CN=demo-gssp.stepup.example.com
+V	230901101638Z		D90BC75DD931ECA844120F6FD2E35781	unknown	/C=NL/O=Development VM/CN=demo-gssp-2.stepup.example.com
