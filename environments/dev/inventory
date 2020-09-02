@@ -47,7 +47,8 @@
 # TODO: Set hostname and host_ipv4 of the app server
 # The Stepup-VM has one app VM with a fixed IP 192.168.66.2 that hosts all stepup applications, the database and the
 # proxy. The backend_ipv4 is only there because in the Stepup-VM this host also has the db role.
-app.stepup.example.com host_ipv4=192.168.66.2 backend_ipv4=127.0.0.1
+#  app.stepup.example.com host_ipv4=192.168.66.2   backend_ipv4=127.0.0.1
+app.stepup.dev.rctsaai.pt host_ipv4=192.168.110.10 backend_ipv4=127.0.0.1
 
 #app1.stepup.example.com host_ipv4=192.168.66.10
 #app2.stepup.example.com host_ipv4=192.168.66.11
@@ -65,7 +66,8 @@ app.stepup.example.com host_ipv4=192.168.66.2 backend_ipv4=127.0.0.1
 [manage]
 # TODO: Set hostname and host_ipv4 of the manage server
 # If you do not want to use a manage server you can comment out the line below
-manage.stepup.example.com host_ipv4=192.168.66.3
+#manage.stepup.example.com   host_ipv4=192.168.66.3
+manage.stepup.dev.rctsaai.pt host_ipv4=192.168.110.20
 
 
 ###########
@@ -151,7 +153,7 @@ app
 # The dev role will add development tooling to an app server
 
 [dev]
-#app
+app
 
 
 # The "Stepup-XXX" groups below are used for deployment of the stepup-components
@@ -248,3 +250,4 @@ stepup-azuremfa
 [app:children]
 stepup-app
 ks
+

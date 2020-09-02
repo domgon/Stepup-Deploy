@@ -3,9 +3,9 @@
 - name: Set /etc/hostname to {{ inventory_hostname }}
   template: src='hostname.j2' dest='/etc/hostname'
 
-- name: Write /etc/hosts with {{ inventory_hostname }}
-  template: src='hosts.j2' dest='/etc/hosts'
-  tags: skip_docker_test # Skip when running inside docker, /etc/host cannot be written then
+#- name: Write /etc/hosts with {{ inventory_hostname }}
+#  template: src='hosts.j2' dest='/etc/hosts'
+#  tags: skip_docker_test # Skip when running inside docker, /etc/host cannot be written then
 
 
 # Directory for keeping misc ansible files

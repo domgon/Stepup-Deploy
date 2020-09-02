@@ -29,19 +29,19 @@
 
 # Install logstash-input-relp plugin
 # Grep exit code: 0 when found, 1 when not found, 2 on error
-- name: Check whether logstash-input-relp is installed
-  command: grep -c 'logstash-input-relp' /opt/logstash/Gemfile
-  register: relp_input_installed
-  changed_when: False
-  failed_when: relp_input_installed.rc > 1
-  tags: logstash
+#- name: Check whether logstash-input-relp is installed
+#  command: grep -c 'logstash-input-relp' /opt/logstash/Gemfile
+#  register: relp_input_installed
+#  changed_when: False
+#  failed_when: relp_input_installed.rc > 1
+#  tags: logstash
 
 # Note: Can be slow...
-- name: Install logstash-input-relp plugin (this can take a few minutes!)
-  shell: sudo -u logstash ./bin/plugin install logstash-input-relp chdir=/opt/logstash/
-  when: relp_input_installed.rc == 1
-  notify: Restart logstash
-  tags: logstash
+#- name: Install logstash-input-relp plugin (this can take a few minutes!)
+#  shell: sudo -u logstash /opt/logstash/bin/plugin install logstash-input-relp
+#  when: relp_input_installed.rc == 1
+#  notify: Restart logstash
+#  tags: logstash
 
 - name: Put logstash config
   template: src='logstash/{{ item }}.j2' dest='/etc/logstash/conf.d/{{ item }}'
