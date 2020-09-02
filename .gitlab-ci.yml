@@ -1,0 +1,24 @@
+image: python:3-slim
+
+before_script:
+  - whoami
+  - pip install ansible
+  - ansible --version
+  - pwd
+
+stages:
+  - check
+
+ansible-linter:
+  stage: check
+  tags: ['ansible']
+  script:
+    - ansible-playbook -i environments/dev/inventory site.yml --syntax-check
+    - ansible-playbook -i environments/dev/inventory deploy.yml --syntax-check
+    - ansible-playbook -i environments/qua/inventory site.yml --syntax-check
+    - ansible-playbook -i environments/qua/inventory deploy.yml --syntax-check
+    - ansible-playbook -i environments/prd/inventory site.yml --syntax-check
+    - ansible-playbook -i environments/prd/inventory deploy.yml --syntax-check
+  only:
+    - master
+  allow_failure: true
